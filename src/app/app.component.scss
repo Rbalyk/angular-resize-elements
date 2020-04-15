@@ -1,0 +1,68 @@
+.application{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  app-document{
+    width: inherit;
+    padding: 0 15px;
+  }
+  app-right-sidebar,app-left-sidebar{
+    width: 300px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  app-drag-element-dog,app-drag-element-cat{
+    position: relative;
+    display: block;
+    background: yellow;
+    min-height: calc(50% - 2.5px);
+    width: 100%;
+    height: 100%;
+    button{
+      margin-top: 10px;
+      width: 100%;
+      height: 45px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      border: 0;
+    }
+  }
+  app-drag-element-dog{
+    .resize{
+      bottom: 5px;
+    }
+  }
+
+  app-drag-element-cat{
+    .resize{
+      top: 5px;
+    }
+  }
+}
+.resize{
+  background: black;
+}
+.resize__right{
+  background: red;
+  z-index: 999;
+}
+hr{
+  z-index: 999;
+  width: 100%;
+  display: block;
+  background: transparent;
+  margin: 0;
+  border: 0;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+}
